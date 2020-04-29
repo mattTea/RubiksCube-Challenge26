@@ -7,7 +7,7 @@ Opening Hours
 
 ## Instructions
 
-Each side of A `rubiks cube` is divided into 3 horizontal and vertical layers. 
+Each side of a `rubiks cube` is divided into 3 horizontal and vertical layers. 
 The cube initially has a different colour on each face with 9 coloured stickers positioned between the horizontal and vertical intersections. 
 Layers at the edge of the cube can be rotated by 90 degrees in either direction.
 
@@ -37,13 +37,13 @@ The colours of each sticker are...
 - White
 - Blue
 
-The direction of rotation is either `CW` (clockwise) or `CCW` (counter-clockwise)
+The direction of rotation is either `CW` (clockwise) or `ACW` (anti-clockwise)
 
 
 For example, a valid function call (in psuedo code) could be:
 
 ```kotlin
-newCube = rotoateCube(["GGGGGGGGG","YYYYYYYYY","OOOOOOOOO","RRRRRRRRR","WWWWWWWWW","BBBBBBBBB"],"Top","CW")
+newCube = rotateCube(["GGGGGGGGG","YYYYYYYYY","OOOOOOOOO","RRRRRRRRR","WWWWWWWWW","BBBBBBBBB"],"Top","CW")
 ```
 
 In this case the top layer of the Front side moves to the top layer of the Left side, 
@@ -55,7 +55,7 @@ The top and bottom layers rotate but because they have stickers with all the sam
 
 So output would be:
 ```kotlin
-["RRRGGGGGG","OOOYYYYYY","GGGGOOOOOO","YYYRRRRRR","WWWWWWWWW","BBBBBBBBB"]
+["RRRGGGGGG","OOOYYYYYY","GGGOOOOOO","YYYRRRRRR","WWWWWWWWW","BBBBBBBBB"]
 ```
 
 ------
