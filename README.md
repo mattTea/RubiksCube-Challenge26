@@ -77,6 +77,12 @@ Rotating the right side clockwise should give:
 ["GGBGGBGGB","WYYWYYWYY","OOOOOOOOO","RRRRRRRRR","WWGWWGWWG","YBBYBBYBB"]
 ```
 
+David Bevan (re above)...
+The bottom (last face) is wrong, should be "BBYBBYBBY"
+Same for Left CW
+
+------
+
 Rotating the front side clockwise should give:
 ```kotlin
 ["GGGGGGGGG","YYYYYYYYY","OOBOOBOOB","WRRWRRWRR","WWWWWWOOO","BBBBBBRRR"]
