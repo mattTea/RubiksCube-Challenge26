@@ -74,6 +74,21 @@ class RotateCubeTest {
 
         assertThat(result).isEqualTo(expected)
     }
+
+    @Test
+    fun `should return new cube following CW rotation of front face`() {
+        val result = rotateCube(startingCube, FRONT, CW)
+        val expected = listOf(
+            "GGGGGGGGG",
+            "YYYYYYYYY",
+            "OOBOOBOOB",
+            "WRRWRRWRR",
+            "WWWWWWOOO",
+            "BBBBBBRRR"
+        )
+
+        assertThat(result).isEqualTo(expected)
+    }
 }
 
 /*

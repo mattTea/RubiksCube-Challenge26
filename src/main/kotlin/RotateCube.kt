@@ -53,6 +53,29 @@ fun rotateCube(cube: List<String>, faceToRotate: FaceToRotate, direction: Direct
                 }
             }
         }
+        FRONT -> {
+            when (direction) {
+                CW -> {
+                    listOf(
+                        cube[0],
+                        cube[1],
+                        cube[2]
+                            .mapIndexed { index, char -> if ((index + 1) % 3 == 0) cube[5][0] else char }
+                            .joinToString(""),
+                        cube[3]
+                            .mapIndexed { index, char -> if (index % 3 == 0) cube[4][0] else char }
+                            .joinToString(""),
+                        cube[4].replaceRange(IntRange(6, 8), cube[2].take(3)),
+                        cube[5].replaceRange(IntRange(6, 8), cube[3].take(3))
+                    )
+                }
+                ACW -> {
+                    listOf(
+
+                    )
+                }
+            }
+        }
         else -> cube
     }
 
