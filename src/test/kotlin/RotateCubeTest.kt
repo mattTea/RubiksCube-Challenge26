@@ -1,7 +1,6 @@
 import Direction.ACW
 import Direction.CW
-import FaceToRotate.BOTTOM
-import FaceToRotate.TOP
+import FaceToRotate.*
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import org.junit.jupiter.api.Test
@@ -17,7 +16,7 @@ class RotateCubeTest {
     )
 
     @Test
-    fun `should return new cube with 4 faces updated following CW rotation of top face`() {
+    fun `should return new cube following CW rotation of top face`() {
         val result = rotateCube(startingCube, TOP, CW)
         val expected = listOf(
             "RRRGGGGGG",
@@ -32,7 +31,7 @@ class RotateCubeTest {
     }
 
     @Test
-    fun `should return new cube with 4 faces updated following ACW rotation of top face`() {
+    fun `should return new cube following ACW rotation of top face`() {
         val result = rotateCube(startingCube, TOP, ACW)
         val expected = listOf(
             "OOOGGGGGG",
@@ -47,7 +46,7 @@ class RotateCubeTest {
     }
 
     @Test
-    fun `should return new cube with 4 faces updated following CW rotation of bottom face`() {
+    fun `should return new cube following CW rotation of bottom face`() {
         val result = rotateCube(startingCube, BOTTOM, CW)
         val expected = listOf(
             "GGGGGGOOO",
@@ -62,7 +61,7 @@ class RotateCubeTest {
     }
 
     @Test
-    fun `should return new cube with 4 faces updated following ACW rotation of bottom face`() {
+    fun `should return new cube following ACW rotation of bottom face`() {
         val result = rotateCube(startingCube, BOTTOM, ACW)
         val expected = listOf(
             "GGGGGGRRR",
@@ -76,3 +75,14 @@ class RotateCubeTest {
         assertThat(result).isEqualTo(expected)
     }
 }
+
+/*
+Indexes...
+
+FRONT, -> 0
+BACK, -> 1
+LEFT, -> 2
+RIGHT, -> 3
+TOP, -> 4
+BOTTOM -> 5
+*/

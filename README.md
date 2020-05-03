@@ -1,5 +1,5 @@
-Opening Hours
-=============
+Rubiks Cube
+===========
 
 [JL coding challenge 26](https://coding-challenges.jl-engineering.net/challenges/challenge-26/)
 
@@ -10,6 +10,9 @@ Opening Hours
 Each side of a `rubiks cube` is divided into 3 horizontal and vertical layers. 
 The cube initially has a different colour on each face with 9 coloured stickers positioned between the horizontal and vertical intersections. 
 Layers at the edge of the cube can be rotated by 90 degrees in either direction.
+
+[Cube orientation](https://github.com/mattTea/RubiksCube-Challenge26/blob/master/RubiksCube.png)
+
 
 **This challenge is to create a function that creates a `new cube` when a face of the cube is rotated.**
 
