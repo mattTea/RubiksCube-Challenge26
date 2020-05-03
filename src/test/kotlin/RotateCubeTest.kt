@@ -1,5 +1,6 @@
 import Direction.ACW
 import Direction.CW
+import FaceToRotate.BOTTOM
 import FaceToRotate.TOP
 import assertk.assertThat
 import assertk.assertions.isEqualTo
@@ -44,10 +45,34 @@ class RotateCubeTest {
 
         assertThat(result).isEqualTo(expected)
     }
-}
 
-// if direction == ACW
-// first 3 chars of frontFace [0] move to rightFace [3]
-// first 3 chars of rightFace [3] move to backFace [1]
-// first 3 chars of backFace [1] move to leftFace [2]
-// first 3 chars of leftFace [2] move to leftFace [0]
+    @Test
+    fun `should return new cube with 4 faces updated following CW rotation of bottom face`() {
+        val result = rotateCube(startingCube, BOTTOM, CW)
+        val expected = listOf(
+            "GGGGGGOOO",
+            "YYYYYYRRR",
+            "OOOOOOYYY",
+            "RRRRRRGGG",
+            "WWWWWWWWW",
+            "BBBBBBBBB"
+        )
+
+        assertThat(result).isEqualTo(expected)
+    }
+
+    @Test
+    fun `should return new cube with 4 faces updated following ACW rotation of bottom face`() {
+        val result = rotateCube(startingCube, BOTTOM, ACW)
+        val expected = listOf(
+            "GGGGGGRRR",
+            "YYYYYYOOO",
+            "OOOOOOGGG",
+            "RRRRRRYYY",
+            "WWWWWWWWW",
+            "BBBBBBBBB"
+        )
+
+        assertThat(result).isEqualTo(expected)
+    }
+}
